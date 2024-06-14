@@ -1,3 +1,5 @@
+import TaskDeleteButton from "./TaskDeleteButton/TaskDeleteButton"
+import TaskEditButton from "./TaskEditButton/TaskEditButton"
 
 const TaskCard = () => {
   return (
@@ -13,8 +15,8 @@ const TaskCard = () => {
                 {true ? 'Completed' : 'Incomplete'}
             </div>
             <div className='flex gap-4'>
-                <div>編集</div>
-                <div>削除</div>
+                <TaskEditButton id='1' />
+                <TaskDeleteButton id='1'/>
             </div>
         </div>
       </div>

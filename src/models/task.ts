@@ -20,6 +20,9 @@ const taskSchema = new mongoose.Schema<TaskDocument>({
     },
     description: {
         type: String,
+    },
+    dueDate: {
+        type: String,
         required: true,
     },
     isCompleted: {

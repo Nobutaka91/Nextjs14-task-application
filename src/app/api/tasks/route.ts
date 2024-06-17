@@ -4,11 +4,10 @@ import { NextResponse } from "next/server";
 
 export const GET = async () => {
     try {
-        await connectDb();
-        const allTasks: TaskDocument[] = await TaskModel.find();
+        await connectDb(); // データベースとの接続
+        const allTasks: TaskDocument[] = await TaskModel.find(); // find()で全てのタスクを取得
 
-        return NextResponse.json({ message: 'タスク取得成功', tasks: allTasks
-         })
+        return NextResponse.json({ message: 'タスク取得成功', tasks: allTasks});
     } catch (error) {
         console.log(error);
         return NextResponse.json({ message: 'タスク取得失敗'}, {status: 500})

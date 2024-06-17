@@ -1,4 +1,4 @@
-import TaskCard from "@/components/SideMenu/TaskCard/TaskCard";
+import TaskCard from "@/components/TaskCard/TaskCard";
 
 const CompletedTaskPage = () => {
     return (
